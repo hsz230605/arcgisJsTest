@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <title>hello</title>
+    <link rel="stylesheet" type="text/css" href="http://58.210.9.131/EsriJS/3.18/esri/css/esri.css">
+    <link type="text/css" rel="stylesheet" href="css/search.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/laypage/laypage.js"></script>
+    <script src="http://58.210.9.131/EsriJS/3.18/init.js"></script>
+</head>
+<body>
+<div class="searchBox">
+    <div class="search" >
+        <select  class="bd search-select">
+            <option value="红线面积">项目红线</option>
+            <option value="绿地率">绿地率</option>
+            <option value="总建筑面积">总建筑面积</option>
+        </select>
+        <input class="bd search-input" placeholder="请输入查询内容">
+        <img role="img" src="loading.svg"/>
+        <button class="bd search-btn">搜索</button>
+    </div>
+    <div class="resultView bd">
+        <div class="resultView-header">
+            <ul>
+                <li class="resultView-this">搜索结果</li>
+            </ul>
+            <span>共<span class="total">0</span>个结果<span class="resultClose"></span></span>
+        </div>
+        <div id = "page" class="resultView-content">
+        </div>
+    </div>
+</div>
+<div id="map" class="map"></div>
+<div class="toggle">
+    <div class="active blue"><img src="poi/地图2.png"/><span></span></div>
+    <div><img src="poi/地球(1).png"><span></span></div>
+    <div class="test"><span>test</span></div>
+</div>
+
+<script src="js/wktToGeometry.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

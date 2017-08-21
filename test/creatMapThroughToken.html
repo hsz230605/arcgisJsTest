@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>creatMap</title>
+    <link rel="stylesheet" type="text/css" href="http://58.210.9.131/EsriJS/3.18/esri/css/esri.css">
+    <style>
+        html,body,#map{
+            padding:0;
+            margin:0;
+            height:100%;
+        }
+    </style>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="http://58.210.9.131/EsriJS/3.18/init.js"></script>
+        <script>
+      var map;
+
+      require(["esri/map",
+        "esri/layers/ArcGISTiledMapServiceLayer",
+        "esri/geometry/Point",
+        "esri/SpatialReference",
+        "dojo/domReady!"],
+        function(Map, ArcGISTiledMapServiceLayer, Point, SpatialReference) {
+            var tiled = new ArcGISTiledMapServiceLayer('http://172.28.76.22/SIPSD/rest/services/SIPSD/sipmap/MapServer?token=K2tfCFmv6aBGOks9gXYRa0qjwBVBYU6474H6R7N7NUw.');
+            tiled.visible
+          map = new Map("map", {
+            center: new Point(569764.000,2408471.000)
+
+          });
+            tiled.id='id1';
+          map.addLayer(tiled);
+          map.getLayer('id1').visible=false;
+
+          console.log(tiled);
+          console.log(map);
+        }
+      );
+    </script>
+</head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>

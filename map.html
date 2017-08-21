@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map</title>
+    <link rel="stylesheet" type="text/css" href="http://58.210.9.131/EsriJS/3.18/esri/css/esri.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="http://58.210.9.131/EsriJS/3.18/init.js"></script>
+</head>
+<style>
+    html, body, #map {
+        padding:0;
+        margin:0;
+        height:100%;
+    }
+    .toggle{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 50;
+    }
+</style>
+<div id="map" class="map"></div>
+<div class="toggle">
+    <button class="base1">地图</button>
+    <button class="base2">影像</button>
+    <button class="test">test</button>
+</div>
+<script src="test/map.js"></script>
+</body>
+</html>
